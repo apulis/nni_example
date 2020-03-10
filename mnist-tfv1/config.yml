@@ -1,0 +1,25 @@
+debug: true
+authorName: default
+experimentName: example_mnist
+trialConcurrency: 1
+maxExecDuration: 1h
+maxTrialNum: 10
+trainingServicePlatform: dlts
+searchSpacePath: search_space.json
+useAnnotation: false
+tuner:
+  builtinTunerName: TPE
+  classArgs:
+    optimize_mode: maximize
+trial:
+  command: python3 mnist.py
+  codeDir: .
+  # You can specify your gpu num here
+  gpuNum: 0
+  #The docker image to run nni job on dlts
+  image: apulistech/nni
+dltsConfig:
+  #Your dashboard uri
+  dashboard: http://apulis-sz-dev-infra01.sigsus.cn/
+  #Your cluster name
+  cluster: apulis-sz-dev  
