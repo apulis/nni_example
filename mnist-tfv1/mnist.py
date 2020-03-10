@@ -211,7 +211,7 @@ def main(params):
 def get_params():
     ''' Get parameters from command line '''
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", type=str, default='/tmp/tensorflow/mnist/input_data', help="data directory")
+    parser.add_argument("--data_dir", type=str, default='/data/mnist-tfv1', help="data directory")
     parser.add_argument("--dropout_rate", type=float, default=0.5, help="dropout rate")
     parser.add_argument("--channel_1_num", type=int, default=32)
     parser.add_argument("--channel_2_num", type=int, default=64)
